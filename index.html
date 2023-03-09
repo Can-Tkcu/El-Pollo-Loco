@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/7_statusbars/3_icons/icon_salsa_bottle.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>El Pollo Loco</title>
+    <!-- SCRIPTS -->
+
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/baby-chicken.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/statusbar.class.js"></script>
+    <script src="models/statusbar-boss.class.js"></script>
+    <script src="models/statusbar-overlay.class.js"></script>
+    <script src="models/statusbar-bottle.class.js"></script>
+    <script src="models/statusbar-coin.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/game-over.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="models/dead-chicken.class.js"></script>
+    <script src="models/dead-baby-chicken.class.js"></script>
+    <script src="models/dead-boss.class.js"></script>
+    <script src="models/splashed-bottle.class.js"></script>
+    <script src="models/coins.class.js"></script>
+    <script src="models/heart.class.js"></script>
+    <script src="models/salsa-bottles.class.js"></script>
+    <script src="models/sound.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="cache/character-images.class.js"></script>
+    <script src="cache/boss-images.class.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- SCRIPTS -->
+  </head>
+
+  <body>
+    <h1>El Pollo Loco</h1>
+    <div id="rotate">ROTATE PHONE</div>
+    <div id="container">
+      
+      <div id="HUD-wrapper">
+
+        <div id="HUD-toggle" onclick="toggleHUD()">
+          <span id="HUD-bar">START</span>
+        </div>
+
+        <div id="oval"></div>
+
+        <div id="HUD">
+          <div id="settings">
+            <div id="start-game" onclick="initLevel()">
+              <img src="./img/7_statusbars/3_icons/play-button.png">
+            </div>
+            <div id="controls" onclick="showControls()">
+              <img src="./img/7_statusbars/3_icons/arrows.png">
+            </div>
+            <div id="music" onclick="toggleMusic()">
+              <img src="./img/7_statusbars/3_icons/music.png">
+            </div>
+            <div id="sounds" onclick="toggleSounds()">
+              <img src="./img/7_statusbars/3_icons/volume.png">
+            </div>
+            <div class="d-none" id="fullscreen" onclick="toggleFullscreen()">
+              <img src="./img/7_statusbars/3_icons/expand.png">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="HUD-touch">
+
+        <div id="touch-wrapper">
+
+          <div id="movement">
+            <button id="left">
+              <img src="./img/7_statusbars/3_icons/left.png">
+            </button>
+            <button id="right">
+              <img src="./img/7_statusbars/3_icons/right.png">
+            </button>
+          </div>
+
+          <div id="jump-throw">
+            <button id="jump">
+              <img src="./img/7_statusbars/3_icons/up-arrow.png">
+            </button>
+            <button id="throw">
+              <img src="./img/7_statusbars/3_icons/aim.png">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="control-scheme">
+
+        <div id="control-scheme-wrapper">
+          <div class="wrapper">
+            <div class="wrapper"> <span>LEFT =</span> <img src="./img/7_statusbars/3_icons/left.png"> </div>
+            <div class="wrapper"> <span>RIGHT =</span> <img src="./img/7_statusbars/3_icons/right.png"> </div>
+          </div>
+
+          <div class="wrapper">
+            <div class="wrapper"> <span>JUMP =</span> <img src="./img/7_statusbars/3_icons/up-arrow.png"> </div>
+            <div class="wrapper"> <span>THROW =</span> <span>F</span> </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div id="start-screen"></div>
+      <canvas id="canvas" width="960" height="480"></canvas>
+    </div>
+  </body>
+</html>

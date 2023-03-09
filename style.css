@@ -1,0 +1,292 @@
+body {
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/5_background/main-menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  touch-action: none;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex {
+  display: flex !important;
+}
+
+span {
+  text-transform: capitalize;
+  font-family: "zabars";
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "zabars";
+}
+
+canvas {
+  /* position: relative; */
+  background-color: black;
+  display: block;
+}
+
+#container {
+  margin-top: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+#start-screen {
+  width: 960px;
+  height: 480px;
+  background-image: url("./img/9_intro_outro_screens/start/startscreen_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 5;
+}
+
+#HUD-wrapper {
+  position: absolute;
+  bottom: 0px;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#oval {
+  margin-top: -5px;
+  height: 10px;
+  width: 200px;
+  background-color: #555;
+  border-radius: 0px 0px 10px 10px;
+  transition: all 225ms;
+  transform: translateY(81px);
+  background-color: #ff9600;
+  border: 1px solid black;
+}
+
+#HUD-toggle {
+  height: 25px;
+  width: 120px;
+  background-color: #ff9600;
+  cursor: pointer;
+  transition: all 225ms;
+  transform: translateY(81px);
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border: 1px solid black;
+}
+
+#HUD-toggle:hover {
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+}
+
+#HUD {
+  background-color: black;
+  height: 60px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 225ms;
+  transform: translateY(81px);
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px;
+}
+
+#HUD-touch {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 960px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+
+#movement,
+#jump-throw {
+  display: flex;
+  gap: 60px;
+  margin: 0px 20px;
+}
+
+#left,
+#right,
+#jump,
+#right,
+#throw {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff9600;
+}
+
+#touch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  height: 20px;
+  width: 20px;
+}
+
+#start-game {
+  height: 100%;
+  width: 50px;
+  background-color: white;
+  box-shadow: inset 0 0 0 0 #31302b;
+  border-radius: 5px;
+  transition: all ease 0.8s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 32px;
+}
+
+#settings {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+
+#fullscreen,
+#controls,
+#sounds,
+#music {
+  height: 100%;
+  width: 50px;
+  background-color: #ffcb19;
+  box-shadow: inset 0 0 0 0 #31302b;
+  border-radius: 5px;
+  transition: all ease 0.8s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls {
+  opacity: 0.5;
+}
+
+#control-scheme {
+  height: 80px;
+  width: 960px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+  display: none;
+  align-items: center;
+}
+
+#control-scheme-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.toggleHUD {
+  transform: translateY(0px) !important;
+}
+
+.selected {
+  opacity: 0.5 !important;
+}
+
+.selected-ctrl {
+  opacity: 1 !important;
+}
+
+#fullscreen:hover,
+#start-game:hover,
+#sounds:hover,
+#music:hover,
+#controls:hover {
+  box-shadow: inset 100px 0 0 0 #e0e0e0;
+  color: #fff;
+}
+
+#rotate {
+  display: none;
+  font-family: 'zabars';
+  font-size: 40px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: 13;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.534);
+}
+
+@media (max-width: 960px) {
+  .d-flex {
+    display: flex !important;
+  }
+
+  #controls,
+  #fullscreen,
+  h1 {
+    display: none;
+  }
+
+  #container {
+    margin-top: unset;
+  }
+  #HUD-touch,
+  #start-screen,
+  canvas {
+    width: 100%;
+  }
+
+  #HUD {
+    width: 200px;
+  }
+}
+
+@media (max-height: 480px) {
+  #start-screen,
+  canvas {
+    height: 100vh;
+  }
+}
+
+
+@media (orientation: portrait) and (max-width: 960px) {
+    #rotate {
+      display: flex;
+    }
+}
